@@ -65,17 +65,30 @@ input,textarea{padding:12px 14px;border:1.5px solid var(--line);border-radius:8p
 input:focus,textarea:focus{border-color:var(--frame)}
 .contact{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;text-align:center}
 .contact>div{background:var(--card);border-radius:16px;padding:32px 20px;box-shadow:var(--sh)}.contact h3{margin:.8em 0 .2em}
-footer{background:var(--blue);color:#fff;text-align:center;padding:28px;font-size:.85rem;letter-spacing:.06em}
+.top{background:#1b2a5e;color:#cfd5ec;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;display:flex;justify-content:space-between;gap:6px 20px;flex-wrap:wrap;padding:9px 5vw}
+.hero .btn{margin:28px 6px 0}.btn.o{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.85)}.btn.o:hover{background:#fff;color:var(--blue)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:26px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:36px 28px;text-align:center;box-shadow:var(--sh);transition:transform .3s}.card:hover{transform:translateY(-5px)}
+.card b{display:block;font:300 2.8rem/1.2 "Roboto Slab",Georgia,serif;color:var(--navy)}.card h3{font-size:1.02rem;text-transform:uppercase;letter-spacing:.08em;margin:.4em 0}.card p{font-size:.95rem;margin:0 0 1.2em}
+.more{color:var(--navy);font-weight:700;letter-spacing:.1em;font-size:.78rem;text-transform:uppercase;text-decoration:none;border-bottom:2px solid var(--frame);padding-bottom:2px}.blue .more{color:#fff;border-color:#ffd58a}.more:hover{opacity:.75}
+footer{background:var(--blue);color:#fff;padding:60px 6vw 24px;font-size:.92rem}
+.fgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:36px;max-width:1100px;margin:auto}
+footer h4{font:700 .78rem "Helvetica Neue",Arial,sans-serif;letter-spacing:.22em;text-transform:uppercase;color:#ffd58a;margin:0 0 14px}footer.grey h4{color:var(--navy)}
+footer ul{list-style:none;margin:0;padding:0}footer li{margin:7px 0}footer a{color:inherit;text-decoration:none;opacity:.9}footer a:hover{opacity:1;text-decoration:underline}footer p{margin:0 0 .8em}
+.flogo{font-weight:800;letter-spacing:.14em;display:block;margin-bottom:12px}
+footer form{padding:0;border:0;box-shadow:none;background:none;max-width:none;margin:0;display:flex;flex-wrap:wrap;gap:10px}footer form input{flex:1 1 160px;color:var(--ink)}footer form .btn{padding:12px 24px}footer.grey .btn{background:var(--navy);color:var(--bg)}
+.copy{border-top:1px solid rgba(255,255,255,.2);margin:40px auto 0;max-width:1100px;padding-top:20px;text-align:center;font-size:.8rem;letter-spacing:.06em}footer.grey .copy{border-color:var(--line)}
 .pg{display:none}.pg.on{display:block;animation:fade .5s ease}
 @keyframes fade{from{opacity:0;transform:translateY(10px)}}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 @media (max-width:640px){header{flex-direction:column;align-items:flex-start;gap:8px}nav{margin:0;justify-content:flex-start;gap:4px 18px}.stats span{padding:4px 18px}.row{grid-template-columns:1fr}}
 </style></head><body>
+<div class="top"><span>Hong Kong · Shenzhen · Guzhen</span><span>Phone: XXXXXXXX &nbsp;|&nbsp; Email: XXXXXXXX</span></div>
 <header><a class="logo" href="#about"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#1b2a5e"/><g fill="none" stroke="#fff" stroke-width="1.6" opacity=".85"><ellipse cx="20" cy="20" rx="8" ry="18"/><path d="M2 20h36M5 11h30M5 29h30"/></g></svg><span>HARMONY<small>LIGHTING</small></span></a>
 <nav id="nav"></nav></header>
 <main>
 <div class="pg" id="about">
- <div class="hero"><div><small>HARMONY LIGHTING</small><h1>Three decades of lighting expertise</h1></div></div>
+ <div class="hero"><div><small>HARMONY LIGHTING</small><h1>Three decades of lighting expertise</h1><a class="btn" href="#product">View New Products</a><a class="btn o" href="#contact">Contact Us</a></div></div>
  <section><div class="in narrow"><h2>About Us</h2>
  <p>Founded in 1989, Harmony Lighting has spent more than three decades helping lighting businesses around the world grow with confidence. We are more than a sourcing partner—we are a long-term extension of our clients’ teams, combining deep market knowledge, dependable execution, and hands-on support throughout every stage of the lighting supply chain.</p>
  <p>With offices in Hong Kong, Shenzhen, and Guzhen, we provide end-to-end expertise in product sourcing, supply-chain management, engineering support, quality control, production coordination, shipping arrangements, and payment coordination. Our permanent team of lighting specialists has an average tenure of more than 12 years, while our long-term network includes over 500 audited factories. Many of our clients have grown with us from emerging businesses into leading international companies.</p>
@@ -85,25 +98,26 @@ footer{background:var(--blue);color:#fff;text-align:center;padding:28px;font-siz
  <h3>Harmony Lighting Development Ltd.</h3>
  <div class="stats"><span><b>1989</b>Founded</span><span><b>30+</b>Countries</span><span><b>200+</b>Projects</span></div>
  <p>One-stop lighting solutions from consultation to delivery.</p></div></section>
+ <section><div class="in"><h2>Why Harmony</h2><div class="cards"><div class="card"><b>500+</b><h3>Audited Factories</h3><p>A long-term network of verified manufacturers across every lighting category.</p><a class="more" href="#service">Explore Services</a></div><div class="card"><b>12+</b><h3>Years Average Tenure</h3><p>A permanent team of lighting specialists who have grown alongside our clients.</p><a class="more" href="#team">Meet the Team</a></div><div class="card"><b>AI</b><h3>LightingAI</h3><p>Our AI-powered sourcing and order-management platform for faster, more transparent procurement.</p><a class="more" href="#lightingai">Discover LightingAI</a></div></div></div></section>
  <section class="blue" style="text-align:center"><div class="in"><h2>Our Gallery</h2><div class="grid" id="g3"></div><br><a class="btn" href="#gallery">View Gallery</a></div></section>
 </div>
 <div class="pg" id="service">
- <div class="hero"><div><small>HARMONY LIGHTING</small><h1>One-stop lighting solutions, from consultation to delivery</h1></div></div>
+ <div class="hero"><div><small>HARMONY LIGHTING</small><h1>One-stop lighting solutions, from consultation to delivery</h1><a class="btn" href="#contact">Contact Us</a></div></div>
  <section class="blue"><div class="in"><h2>Service</h2><div class="svc" id="svc"></div></div></section>
 </div>
 <div class="pg" id="lightingai">
- <div class="hero"><div><small>HARMONY LIGHTING</small><h1>AI-powered lighting sourcing</h1></div></div>
+ <div class="hero"><div><small>HARMONY LIGHTING</small><h1>AI-powered lighting sourcing</h1><a class="btn" href="#contact">Contact Us</a></div></div>
  <section><div class="in"><h2>LightingAI</h2><p style="text-align:center;max-width:640px;margin:0 auto 40px">Description</p>
  <div class="vid"><div class="play">▶</div></div></div></section>
 </div>
 <div class="pg" id="product">
- <div class="hero"><div><small>HARMONY LIGHTING</small><h1>Discover our latest lighting</h1></div></div>
+ <div class="hero"><div><small>HARMONY LIGHTING</small><h1>Discover our latest lighting</h1><a class="btn" href="#gallery">View Gallery</a></div></div>
  <section><div class="in"><h2>New Product</h2><p style="text-align:center">Description of New Product</p></div></section>
  <section class="grey"><div class="in"><h2>Indoor Lighting</h2><div class="grid" id="in"></div></div></section>
  <section class="blue"><div class="in"><h2>Outdoor Lighting</h2><div class="grid" id="out"></div></div></section>
 </div>
 <div class="pg" id="team">
- <div class="hero"><div><small>HARMONY LIGHTING</small><h1>The people behind Harmony</h1></div></div>
+ <div class="hero"><div><small>HARMONY LIGHTING</small><h1>The people behind Harmony</h1><a class="btn" href="#contact">Contact Us</a></div></div>
  <section><div class="in"><h2>Our Team</h2><div class="team" id="tm"></div></div></section>
 </div>
 <div class="pg" id="contact">
@@ -120,11 +134,18 @@ footer{background:var(--blue);color:#fff;text-align:center;padding:28px;font-siz
  <section><div class="in"><h2>Lighting Gallery</h2><p style="text-align:center;margin-bottom:32px">This is the Description of the Gallery</p><div class="grid" id="g15"></div></div></section>
 </div>
 </main>
-<footer id="ft">© Harmony Lighting Development Ltd.</footer>
+<footer id="ft"><div class="fgrid">
+<div><a class="flogo" href="#about">HARMONY LIGHTING</a><p>Since 1989, helping lighting businesses around the world grow with confidence.</p><p>Hong Kong · Shenzhen · Guzhen</p></div>
+<div><h4>Information</h4><ul id="fl"></ul></div>
+<div><h4>Contact</h4><p>Address: XXXXXXXX<br>Email: XXXXXXXX<br>Phone: XXXXXXXX</p></div>
+<div><h4>Join Our List</h4><p>Sign up to hear about our latest products and updates.</p><form id="nl"><input type="email" required placeholder="Your email address" aria-label="Email address"><button class="btn" type="submit">Subscribe</button><span id="nlok" role="status"></span></form></div>
+</div><div class="copy">© Harmony Lighting Development Ltd.</div></footer>
 <script>
 const $=id=>document.getElementById(id);
 const pages=[["about","About Us"],["service","Service"],["lightingai","LightingAI"],["product","New Product"],["team","Our Team"],["contact","Contact Us"]];
 $("nav").innerHTML=pages.map(p=>`<a href="#${p[0]}" data-p="${p[0]}">${p[1]}</a>`).join("");
+$("fl").innerHTML=pages.concat([["gallery","Gallery"]]).map(p=>`<li><a href="#${p[0]}">${p[1]}</a></li>`).join("");
+$("nl").onsubmit=e=>{e.preventDefault();$("nlok").textContent="Thank you for subscribing.";e.target.reset()};
 const ph=n=>Array(n).fill('<div class="ph">Image</div>').join("");
 const person='<svg viewBox="0 0 100 100" role="img" aria-label="Team member"><circle cx="50" cy="38" r="17" fill="#e1e2dd"/><path d="M16 96Q18 62 50 62Q82 62 84 96Z" fill="#e1e2dd"/></svg>';
 $("g3").innerHTML=ph(3);$("g15").innerHTML=ph(15);
@@ -132,7 +153,7 @@ const prod=n=>Array(n).fill('<div class="item"><div class="ph">Image</div><b>Num
 $("in").innerHTML=prod(6);$("out").innerHTML=prod(6);
 $("tm").innerHTML=Array(5).fill(`<div><div class="av">${person}</div><b>Name</b><span>Post</span></div>`).join("");
 const S=[["Product & Technical Consultation","Browse and advise on a wide category of lighting products and provide technical support."],["Product & Technical Design","3D rendering photo artwork and customized packaging box design."],["Pre-Production Sample","Used to test the design, functionality, and quality of the product before mass production."],["Quality Management","Supplier quality management, factory field audit, production inspection, quality control, sample testing and evaluation."],["Logistical Coordination","Arrange a shipping forwarder at a good price and get a full report before shipment."],["Good After Sales Service","No headache even if something goes wrong. We are always here for you."]];
-$("svc").innerHTML=S.map((s,i)=>`<div><div class="ic">${i+1}</div><h3>${s[0]}</h3><p>${s[1]}</p></div>`).join("");
+$("svc").innerHTML=S.map((s,i)=>`<div><div class="ic">${i+1}</div><h3>${s[0]}</h3><p>${s[1]}</p><p style="margin-top:18px"><a class="more" href="#contact">Enquire</a></p></div>`).join("");
 $("f").onsubmit=e=>{e.preventDefault();$("ok").textContent="Thank you. We will get back to you soon.";e.target.reset()};
 function route(){let h=location.hash.slice(1)||"about";if(!$(h))h="about";
 document.querySelectorAll(".pg").forEach(p=>p.classList.toggle("on",p.id===h));
