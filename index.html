@@ -219,7 +219,7 @@ const P=[4,5,0,1,2,3,6],S2=P.map(k=>S[k]),IC2=P.map(k=>IC[k]);
 $("svc").innerHTML=S2.map((s,i)=>`<div><div class="sic">${IC2[i]}</div><small class="no">${String(i+1).padStart(2,"0")} —</small><h3>${s[0]}</h3><p>${s[1]}</p></div>`).join("");
 $("f").onsubmit=async e=>{e.preventDefault();const fm=e.target,ok=$("ok"),bt=fm.querySelector("button"),label=bt.textContent;
 const fd=new FormData(fm);if(fd.get("botcheck")){return}
-fd.append("access_key","6c42939c-e8fe-42a4-9060-5f44189cceb8");fd.append("subject","New enquiry from Harmony Lighting website");fd.append("from_name","Harmony Lighting Website");fd.append("name",(fd.get("first_name")+" "+fd.get("last_name")).trim());
+fd.append("access_key","e65023f5-621e-4803-9750-c103e7d999c3");fd.append("subject","New enquiry from Harmony Lighting website");fd.append("from_name","Harmony Lighting Website");fd.append("name",(fd.get("first_name")+" "+fd.get("last_name")).trim());
 bt.textContent="Sending...";bt.disabled=true;ok.style.color="var(--navy)";ok.textContent="";
 try{const r=await fetch("https://api.web3forms.com/submit",{method:"POST",body:fd});const j=await r.json();
 if(r.ok&&j.success!==false){ok.textContent="Thank you. We will get back to you soon.";fm.reset()}else{ok.style.color="#b3261e";ok.textContent="Error: "+(j.message||"could not send")}}
